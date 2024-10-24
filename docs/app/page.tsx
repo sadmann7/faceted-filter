@@ -1,4 +1,4 @@
-import { HomeLayout } from "fumadocs-ui/home-layout";
+import { HomeLayout } from "fumadocs-ui/layouts/home";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";

@@ -53,6 +53,7 @@ Thumbs.db
 
 .turbo
 .vercel
+.source
 
 # Emacs backup files
 \#*

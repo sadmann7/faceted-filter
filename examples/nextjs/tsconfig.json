@@ -27,7 +27,7 @@
     /* Path Aliases */
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./app/*"]
+      "@/*": ["./app/*"]
     }
   },
   "include": ["next-env.d.ts", "app", ".next/types/**/*.ts", "*.js"],

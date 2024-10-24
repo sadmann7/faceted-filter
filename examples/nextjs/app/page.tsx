@@ -1,5 +1,6 @@
 "use client";
 
+import { options } from "@/utils";
 import {
   CreateOption,
   Input,
@@ -9,14 +10,16 @@ import {
   SelectedOptions,
 } from "faceted-filter";
 
-export default function HomePage() {
+export default function IndexPage() {
   return (
     <MultiSelect>
       <Input placeholder="Select options..." />
       <Options>
-        <Option value="option1">Option 1</Option>
-        <Option value="option2">Option 2</Option>
-        <Option value="option3">Option 3</Option>
+        {options.map((option) => (
+          <Option key={option.value} value={option.value}>
+            {option.label}
+          </Option>
+        ))}
       </Options>
       <CreateOption />
       <SelectedOptions />

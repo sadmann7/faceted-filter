@@ -1,14 +1,14 @@
 {
-  "name": "@ui/combobox",
+  "name": "faceted-filter",
   "version": "0.0.1",
   "type": "module",
-  "keywords": ["ccobbobox", "ui", "reaact"],
+  "keywords": ["faceted-filter", "multi-select", "ui", "react"],
   "author": "Sadman Sakib",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sadmann7/wfte",
-    "directory": "packages/combobox"
+    "url": "https://github.com/sadmann7/faceted-filter",
+    "directory": "packages/faceted-filter"
   },
   "main": "dist/index.cjs",
   "module": "dist/index.js",

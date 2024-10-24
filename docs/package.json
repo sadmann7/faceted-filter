@@ -1,5 +1,5 @@
 {
-  "name": "@ui/docs",
+  "name": "docs",
   "private": true,
   "type": "module",
   "scripts": {

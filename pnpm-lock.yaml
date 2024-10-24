@@ -96,9 +96,9 @@ importers:
 
   examples/nextjs:
     dependencies:
-      '@ui/combobox':
+      faceted-filter:
         specifier: workspace:*
-        version: link:../../packages/combobox
+        version: link:../../packages/faceted-filter
       next:
         specifier: ^14.1.0
         version: 14.2.16(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -122,7 +122,7 @@ importers:
         specifier: ^5.3.3
         version: 5.6.3
 
-  packages/combobox:
+  packages/faceted-filter:
     dependencies:
       '@radix-ui/number':
         specifier: ^1.1.0

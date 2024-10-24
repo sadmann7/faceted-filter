@@ -15,7 +15,8 @@
       "a11y": {
         "noSvgWithoutTitle": "off",
         "useButtonType": "off",
-        "useAltText": "off"
+        "useAltText": "off",
+        "useKeyWithClickEvents": "off"
       },
       "complexity": {
         "noBannedTypes": "off"

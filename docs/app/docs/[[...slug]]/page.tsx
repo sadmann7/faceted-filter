@@ -10,10 +10,11 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 interface PageParams {
-  params: { slug?: string[] };
+  params: Promise<{ slug?: string[] }>;
 }
 
-export default async function Page({ params }: PageParams) {
+export default async function Page(props: PageParams) {
+  const params = await props.params;
   const page = source.getPage(params.slug);
 
   if (page == null) notFound();
@@ -37,7 +38,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }: PageParams): Metadata {
+export async function generateMetadata(props: PageParams): Promise<Metadata> {
+  const params = await props.params;
   const page = source.getPage(params.slug);
 
   if (page == null) notFound();

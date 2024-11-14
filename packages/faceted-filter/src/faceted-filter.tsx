@@ -4,12 +4,7 @@ import { createContextScope } from "@radix-ui/react-context";
 import { useId } from "@radix-ui/react-id";
 import { Primitive } from "@radix-ui/react-primitive";
 import { useControllableState } from "@radix-ui/react-use-controllable-state";
-
 import * as React from "react";
-
-// Types
-type ScopedProps<P> = P & { __scopeFacetedFilter?: Scope };
-type Scope<C = any> = { [scopeName: string]: React.Context<C>[] } | undefined;
 
 // Context
 const FACETED_FILTER_NAME = "FacetedFilter";
@@ -23,6 +18,11 @@ type FacetedFilterContextValue = {
   disabled?: boolean;
   contentId: string;
 };
+
+type ScopedProps<P> = P & { __scopeFacetedFilter?: Scope };
+type Scope<C = FacetedFilterContextValue | undefined> =
+  | { [scopeName: string]: React.Context<C>[] }
+  | undefined;
 
 const [createFacetedFilterContext, createFacetedFilterScope] =
   createContextScope(FACETED_FILTER_NAME);
@@ -73,7 +73,7 @@ const FacetedFilter = React.forwardRef<HTMLDivElement, FacetedFilterProps>(
 
     return (
       <FacetedFilterProvider
-        scope={__scopeFacetedFilter}
+        scope={__scopeFacetedFilter as Scope<FacetedFilterContextValue>}
         value={value}
         onValueChange={setValue}
         multi={multi}

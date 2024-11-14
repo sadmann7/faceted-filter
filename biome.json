@@ -16,7 +16,8 @@
         "noSvgWithoutTitle": "off",
         "useButtonType": "off",
         "useAltText": "off",
-        "useKeyWithClickEvents": "off"
+        "useKeyWithClickEvents": "off",
+        "useSemanticElements": "off"
       },
       "complexity": {
         "noBannedTypes": "off"
@@ -31,7 +32,8 @@
         "noDangerouslySetInnerHtml": "off"
       },
       "suspicious": {
-        "noAssignInExpressions": "off"
+        "noAssignInExpressions": "off",
+        "noExplicitAny": "off"
       }
     }
   },

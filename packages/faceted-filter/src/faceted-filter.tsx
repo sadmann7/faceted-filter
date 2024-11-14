@@ -251,6 +251,7 @@ const FacetedFilterEmpty = React.forwardRef<
 FacetedFilterEmpty.displayName = "FacetedFilterEmpty";
 
 export {
+  createFacetedFilterScope,
   FacetedFilter,
   FacetedFilterContent,
   FacetedFilterEmpty,
